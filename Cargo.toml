@@ -1,20 +1,17 @@
-[package]
-name = "fastmail-client"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
-egui = { git = "https://github.com/emilk/egui.git" }
-# eframe = { git = "https://github.com/emilk/egui.git", features = ["persistence"] }
-eframe = { git = "https://github.com/emilk/egui.git" }
-# imap = { git = "https://github.com/jonhoo/rust-imap" }
+[workspace]
+resolver = "2"
+members = [
+  "crates/styling",
+  "crates/css",
+  "crates/ui",
+]
 
 [patch."https://github.com/emilk/egui.git"]
 egui = { path = "../egui/crates/egui" }
 eframe = { path = "../egui/crates/eframe" }
 
+[patch."https://github.com/soywod/himalaya.git"]
+himalaya = { path = "../himalaya/" }
+
 [patch.crates-io]
 winit = { path = "../winit/" }
-# cocoa = { path = "../core-foundation-rs/cocoa/" }
-# core-foundation = { path = "../core-foundation-rs/core-foundation/" }
-# core-graphics = { path = "../core-foundation-rs/core-graphics/" }

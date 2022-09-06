@@ -1,0 +1,13 @@
+[package]
+name = "styling"
+version = "0.0.1"
+edition = "2021"
+
+[lib]
+crate-type = ["rlib"]
+
+[dependencies]
+css = { path = "../css" }
+anyhow = "1.0"
+log = "0.4"
+egui = { git = "https://github.com/emilk/egui.git", default-features = false }
