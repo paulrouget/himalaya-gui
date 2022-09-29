@@ -714,36 +714,12 @@ dependencies = [
 
 [[package]]
 name = "darling"
-version = "0.10.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0d706e75d87e35569db781a9b5e2416cff1236a47ed380831f959382ccd5f858"
-dependencies = [
- "darling_core 0.10.2",
- "darling_macro 0.10.2",
-]
-
-[[package]]
-name = "darling"
 version = "0.13.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a01d95850c592940db9b8194bc39f4bc0e89dee5c4265e4b1807c34a9aba453c"
 dependencies = [
- "darling_core 0.13.4",
- "darling_macro 0.13.4",
-]
-
-[[package]]
-name = "darling_core"
-version = "0.10.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f0c960ae2da4de88a91b2d920c2a7233b400bc33cb28453a2987822d8392519b"
-dependencies = [
- "fnv",
- "ident_case",
- "proc-macro2",
- "quote",
- "strsim 0.9.3",
- "syn",
+ "darling_core",
+ "darling_macro",
 ]
 
 [[package]]
@@ -762,22 +738,11 @@ dependencies = [
 
 [[package]]
 name = "darling_macro"
-version = "0.10.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d9b5a2f4ac4969822c62224815d069952656cadc7084fdca9751e6d959189b72"
-dependencies = [
- "darling_core 0.10.2",
- "quote",
- "syn",
-]
-
-[[package]]
-name = "darling_macro"
 version = "0.13.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9c972679f83bdf9c42bd905396b6c3588a843a17f0f16dfcfa3e2c5d57441835"
 dependencies = [
- "darling_core 0.13.4",
+ "darling_core",
  "quote",
  "syn",
 ]
@@ -875,6 +840,7 @@ dependencies = [
 [[package]]
 name = "eframe"
 version = "0.19.0"
+source = "git+https://github.com/paulrouget/egui.git?branch=allocate_margins#ed097299033f98b81d9fe2f5f258a8a96e0b800d"
 dependencies = [
  "bytemuck",
  "egui",
@@ -897,6 +863,7 @@ dependencies = [
 [[package]]
 name = "egui"
 version = "0.19.0"
+source = "git+https://github.com/paulrouget/egui.git?branch=allocate_margins#ed097299033f98b81d9fe2f5f258a8a96e0b800d"
 dependencies = [
  "ahash 0.8.0",
  "epaint",
@@ -907,6 +874,7 @@ dependencies = [
 [[package]]
 name = "egui-wgpu"
 version = "0.19.0"
+source = "git+https://github.com/paulrouget/egui.git?branch=allocate_margins#ed097299033f98b81d9fe2f5f258a8a96e0b800d"
 dependencies = [
  "bytemuck",
  "egui",
@@ -920,6 +888,7 @@ dependencies = [
 [[package]]
 name = "egui-winit"
 version = "0.19.0"
+source = "git+https://github.com/paulrouget/egui.git?branch=allocate_margins#ed097299033f98b81d9fe2f5f258a8a96e0b800d"
 dependencies = [
  "arboard",
  "egui",
@@ -933,6 +902,7 @@ dependencies = [
 [[package]]
 name = "egui_glow"
 version = "0.19.0"
+source = "git+https://github.com/paulrouget/egui.git?branch=allocate_margins#ed097299033f98b81d9fe2f5f258a8a96e0b800d"
 dependencies = [
  "bytemuck",
  "egui",
@@ -962,6 +932,7 @@ checksum = "b1b32a7a2580c4473f10f66b512c34bdd7d33c5e3473227ca833abdb5afe4809"
 [[package]]
 name = "emath"
 version = "0.19.0"
+source = "git+https://github.com/paulrouget/egui.git?branch=allocate_margins#ed097299033f98b81d9fe2f5f258a8a96e0b800d"
 dependencies = [
  "bytemuck",
 ]
@@ -1025,6 +996,7 @@ dependencies = [
 [[package]]
 name = "epaint"
 version = "0.19.0"
+source = "git+https://github.com/paulrouget/egui.git?branch=allocate_margins#ed097299033f98b81d9fe2f5f258a8a96e0b800d"
 dependencies = [
  "ab_glyph",
  "ahash 0.8.0",
@@ -1184,27 +1156,6 @@ dependencies = [
  "cmake",
  "libc",
  "pkg-config",
-]
-
-[[package]]
-name = "from_variants"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "221a1eb1a3c98980bc1b740f462b3dcf73f4e371cda294986bac72497995a4e3"
-dependencies = [
- "from_variants_impl",
-]
-
-[[package]]
-name = "from_variants_impl"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7e08079fa3c89edec9160ceaa9e7172785468c26c053d12924cce0d5a55c241a"
-dependencies = [
- "darling 0.10.2",
- "proc-macro2",
- "quote",
- "syn",
 ]
 
 [[package]]
@@ -1479,6 +1430,7 @@ checksum = "dfa686283ad6dd069f105e5ab091b04c62850d3e4cf5d67debad1933f55023df"
 [[package]]
 name = "himalaya"
 version = "0.6.0"
+source = "git+https://github.com/soywod/himalaya.git?branch=develop#4fe5d246f1dfcd1998b7fc3f770d5f1df08881d3"
 dependencies = [
  "ammonia",
  "anyhow",
@@ -1498,7 +1450,6 @@ dependencies = [
  "mailparse",
  "md5",
  "native-tls",
- "notmuch",
  "regex",
  "rfc2047-decoder",
  "serde",
@@ -1515,9 +1466,9 @@ dependencies = [
 
 [[package]]
 name = "himalaya-lib"
-version = "0.1.0"
+version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "96f48a313c144a2814655823ce87a486230c1d4f4dd0a7e75ba9e9143455d8dc"
+checksum = "a0b8afc6ba5f717638aa023bbe082e46fda3ec261c1ce9b21cb9a6c5e9133cd9"
 dependencies = [
  "ammonia",
  "chrono",
@@ -1531,7 +1482,6 @@ dependencies = [
  "mailparse",
  "md5",
  "native-tls",
- "notmuch",
  "regex",
  "rfc2047-decoder",
  "serde",
@@ -2142,7 +2092,7 @@ version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0df7ac00c4672f9d5aece54ee3347520b7e20f158656c7db2e6de01902eb7a6c"
 dependencies = [
- "darling 0.13.4",
+ "darling",
  "proc-macro-crate",
  "proc-macro2",
  "quote",
@@ -2238,16 +2188,6 @@ dependencies = [
  "mio",
  "walkdir",
  "winapi",
-]
-
-[[package]]
-name = "notmuch"
-version = "0.7.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ca0941fd9af5b8529e3d42494f56efafb909b76190a7a454cde9d6e397390cf9"
-dependencies = [
- "from_variants",
- "libc",
 ]
 
 [[package]]
@@ -3148,12 +3088,6 @@ checksum = "8ea5119cdb4c55b55d432abb513a0429384878c15dde60cc77b1c99de1a95a6a"
 
 [[package]]
 name = "strsim"
-version = "0.9.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6446ced80d6c486436db5c078dde11a9f73d42b57fb273121e160b84f63d894c"
-
-[[package]]
-name = "strsim"
 version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "73473c0e59e6d5812c5dfe2a064a6444949f089e20eec9a2e5506596494e4623"
@@ -3868,6 +3802,7 @@ checksum = "c811ca4a8c853ef420abd8592ba53ddbbac90410fab6903b3e79972a631f7680"
 [[package]]
 name = "winit"
 version = "0.27.3"
+source = "git+https://github.com/paulrouget/winit.git?branch=paul#42af3cf62a321ee5c8436b81eca356d45b4c626c"
 dependencies = [
  "bitflags",
  "cocoa",

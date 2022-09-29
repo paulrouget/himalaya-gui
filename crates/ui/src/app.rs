@@ -65,7 +65,7 @@ impl App {
               ServerEvent::Envelopes((mbox, envelopes)) => {
                 if let Some(selected_mbox) = &self.selected_mbox {
                   if selected_mbox == &mbox {
-                    self.envelopes = envelopes.envelopes;
+                    self.envelopes = envelopes.0;
                   }
                 }
               },

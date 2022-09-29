@@ -104,8 +104,8 @@ pub fn run(ctx: egui::Context, account: String) -> (Sender<ServerCmd>, Receiver<
         ServerCmd::GetMboxes => {
           match backend.folder_list() {
             Err(e) => to_main.send(ServerEvent::Error(e.into())),
-            Ok(msg) => {
-              let mboxes: Vec<MboxName> = msg.folders.into_iter().filter(|f| f.name != "[Gmail]").map(|mbox| mbox.name).collect();
+            Ok(folders) => {
+              let mboxes: Vec<MboxName> = folders.0.into_iter().filter(|f| f.name != "[Gmail]").map(|mbox| mbox.name).collect();
               to_main.send(ServerEvent::Mboxes(mboxes))
             },
           }

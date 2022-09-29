@@ -7,11 +7,8 @@ members = [
 ]
 
 [patch."https://github.com/emilk/egui.git"]
-egui = { path = "../egui/crates/egui" }
-eframe = { path = "../egui/crates/eframe" }
-
-[patch."https://github.com/soywod/himalaya.git"]
-himalaya = { path = "../himalaya/" }
+egui = { git = "https://github.com/paulrouget/egui.git", branch = "allocate_margins" }
+eframe = { git = "https://github.com/paulrouget/egui.git", branch = "allocate_margins" }
 
 [patch.crates-io]
-winit = { path = "../winit/" }
+winit = { git = "https://github.com/paulrouget/winit.git", branch = "paul" }
