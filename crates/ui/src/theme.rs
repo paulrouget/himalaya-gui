@@ -10,6 +10,8 @@ use notify::{FsEventWatcher, RecursiveMode, Watcher};
 use parking_lot::{MappedRwLockReadGuard, RwLock, RwLockReadGuard};
 use styling::{element as elt, fonts, TextColors};
 
+// FIXME:Make it so that we don't need to hold a reference to watchers
+// FIXME: and only carry the rules around.
 pub struct Theme {
   rules: Arc<RwLock<Rules>>,
   _watcher: FsEventWatcher,
