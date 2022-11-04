@@ -118,10 +118,10 @@ impl Window {
           let collection_object = obj
               .downcast_ref()
               .expect("The object should be of type `CollectionObject`.");
-          let row = window.create_collection_row(collection_object);
+          let row = Window::create_collection_row(collection_object);
           row.upcast()
       }),
-    )
+    );
   }
 
   // ANCHOR_END: setup_collections
@@ -148,7 +148,7 @@ impl Window {
   // ANCHOR_END: restore_data
 
   // ANCHOR: create_collection_row
-  fn create_collection_row(&self, collection_object: &CollectionObject) -> ListBoxRow {
+  fn create_collection_row(collection_object: &CollectionObject) -> ListBoxRow {
     let label = Label::builder().ellipsize(pango::EllipsizeMode::End).xalign(0.0).build();
 
     collection_object
