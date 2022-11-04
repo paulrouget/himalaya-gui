@@ -5,7 +5,7 @@ mod task_object;
 mod utils;
 mod window;
 
-use adw::prelude::*;
+use adw::prelude::{ApplicationExt, ApplicationExtManual, GtkApplicationExt, WidgetExt};
 use gtk::gio;
 use window::Window;
 
