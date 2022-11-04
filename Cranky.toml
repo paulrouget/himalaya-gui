@@ -1,5 +1,6 @@
 deny = [
 # "missing_docs",
+# "clippy::unimplemented",
   "unsafe_code",
   "clippy::all",
   "clippy::await_holding_lock",
@@ -77,7 +78,6 @@ deny = [
   "clippy::todo",
   "clippy::trailing_empty_array",
   "clippy::trait_duplication_in_bounds",
-  "clippy::unimplemented",
   "clippy::unnecessary_wraps",
   "clippy::unnested_or_patterns",
   "clippy::unused_self",
