@@ -173,7 +173,7 @@ impl Window {
           let task_object = obj
               .downcast_ref()
               .expect("The object should be of type `TaskObject`.");
-          let row = window.create_task_row(task_object);
+          let row = Window::create_task_row(task_object);
           row.upcast()
       }),
     );
@@ -218,7 +218,7 @@ impl Window {
 
   // ANCHOR_END: select_collection_row
 
-  fn create_task_row(&self, task_object: &TaskObject) -> ActionRow {
+  fn create_task_row(task_object: &TaskObject) -> ActionRow {
     // Create check button
     let check_button = CheckButton::builder().valign(Align::Center).can_focus(false).build();
 
