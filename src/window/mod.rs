@@ -281,7 +281,7 @@ impl Window {
             window
                 .imp()
                 .collections_list
-                .set_selection_mode(SelectionMode::None)
+                .set_selection_mode(SelectionMode::None);
         } else {
             window
                 .imp()
