@@ -1,3 +1,5 @@
+//! FIXME
+
 mod collection_object;
 mod task_object;
 mod utils;
@@ -10,7 +12,7 @@ use window::Window;
 static APP_ID: &str = "com.paulrouget.himalaya-gui";
 
 fn main() {
-    gio::resources_register_include!("todo_8.gresource")
+    gio::resources_register_include!("himalaya-gui.gresource")
         .expect("Failed to register resources.");
 
     // Create a new application
