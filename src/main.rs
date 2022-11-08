@@ -12,6 +12,7 @@ use window::Window;
 static APP_ID: &str = "com.paulrouget.himalaya-gui";
 
 fn main() {
+  // Generated via build.rs
   gio::resources_register_include!("himalaya-gui.gresource").expect("Failed to register resources.");
 
   // Create a new application

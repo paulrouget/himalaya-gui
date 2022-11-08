@@ -14,7 +14,7 @@ install:
 	glib-compile-schemas ${SCHEME_DIR}
 
 run: install
-	GSETTINGS_SCHEMA_DIR=${SCHEME_DIR} cargo run
+	DYLD_LIBRARY_PATH=/tmp/gtk-local/opt/homebrew/lib/ GSETTINGS_SCHEMA_DIR=${SCHEME_DIR} cargo run
 
 build:
 	cargo build --all-features
